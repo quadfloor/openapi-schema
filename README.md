@@ -1,14 +1,13 @@
 # openapi-schemas
 Quadfloor OpenAPI 3.0 JSON schemas. 
 
+<h2>This is a work in progress project</h2>
+<h2>Please contact Quadfloor dev team</h2>
+
 ## Quadfloor APIs:
 - Engineering API
-- Demand API
-- Planner API
-- Scheduler API
 - Production API
 - Materials API
-- SPC API
 ## Schema files
 
 # Schema Details:
