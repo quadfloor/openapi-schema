@@ -44,17 +44,11 @@
                                     "properties": {
                                         "data": {
                                             "type": "object",
-                                            "description": "Object compose by Product IDs and SKU IDs, where the parent ID is from Products and the SKU IDs are the Child IDs.",
-
+                                            "description": "Object compose by local item.",
                                             "properties": {
-                                                "Product ID": {
-                                                    "type": "array",
-                                                    "description": "Array with SKU IDs of a certain product.",
-                                                    "properties": {
-                                                        "SKU ID": {
-                                                            "type": "integer",
-                                                            "description": "Product SKU ID."
-                                                        }
+                                                "id": {
+                                                    "type": "string",
+                                                    "description": "Object Id.",
                                                     }
                                                 }
                                             }
@@ -98,17 +92,11 @@
                                     "properties": {
                                         "data": {
                                             "type": "object",
-                                            "description": "Object compose by Product IDs and SKU IDs, where the parent ID is from Products and the SKU IDs are the Child IDs.",
-
+                                            "description": "Object compose by local item.",
                                             "properties": {
-                                                "Product ID": {
-                                                    "type": "array",
-                                                    "description": "Array with SKU IDs of a certain product.",
-                                                    "properties": {
-                                                        "SKU ID": {
-                                                            "type": "integer",
-                                                            "description": "Product SKU ID."
-                                                        }
+                                                "id": {
+                                                    "type": "string",
+                                                    "description": "Object Id.",
                                                     }
                                                 }
                                             }
