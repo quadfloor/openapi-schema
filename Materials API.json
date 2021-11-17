@@ -1,1 +1,114 @@
 
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Materials API",
+        "description": "Functions to access the materials module data.\n<br><br>\nAll content that comes between {{}} keys must be replaced with the correct data before performing the request.\n<br><br>\nCommon parameters that must be changed in most QUADFLOOR requests\n<br>\n{{accountName}} => Store account name\n<br>\n{{environment}} => The environment that will be called. Change for vtexcommercestable or vtexcommmercebeta\n<br>\n{{X-QUADFLOOR-API-AppKey}} => Located in the headers of the requests, user authentication key\n<br>\n{{X-QUADFLOOR-API-AppToken}} => Located in the headers of the requests, authentication password",
+        "contact": {},
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://{accountName}.quadfloor.com.br",
+            "description": "Quadfloor server url"
+        }
+    ],
+    "paths": {
+        "/api/engineering/materials/GetInventoryItem": {
+            "get": {
+                "tags": ["InventoryItem"],
+                "summary": "Get InventoryItems",
+                "description": "Retrieves one invenroty item defined in the system.",
+                "operationId": "GetInventoryItem",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Fill this variable with the ID that you need retrieve.",
+                        "required": true,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {},
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "object",
+                                            "description": "Object compose by inventory item.",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "description": "Object Id.",
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/engineering/materials/GetInventoryItems": {
+            "get": {
+                "tags": ["InventoryItem"],
+                "summary": "Get InventoryItems",
+                "description": "Retrieves all the materials defined in the system.",
+                "operationId": "GetInventoryItems",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Fill this variable with the inventory item id that you need to retrieve.",
+                        "required": true,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {},
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "object",
+                                            "description": "Object compose by inventory item.",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "description": "Object Id.",
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
