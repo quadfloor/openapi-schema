@@ -1,4 +1,4 @@
-# openapi-schemas
+# openapi-schema
 Quadfloor OpenAPI 3.0 JSON schemas. 
 
 <h2>*** This is a work in progress project***</h2>
