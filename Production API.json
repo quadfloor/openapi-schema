@@ -1,0 +1,113 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Production API",
+        "description": "Functions to access the production module.\n<br><br>\nAll content that comes between {{}} keys must be replaced with the correct data before performing the request.\n<br><br>\nCommon parameters that must be changed in most QUADFLOOR requests\n<br>\n{{accountName}} => Store account name\n<br>\n{{environment}} => The environment that will be called. Change for vtexcommercestable or vtexcommmercebeta\n<br>\n{{X-QUADFLOOR-API-AppKey}} => Located in the headers of the requests, user authentication key\n<br>\n{{X-QUADFLOOR-API-AppToken}} => Located in the headers of the requests, authentication password",
+        "contact": {},
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "https://{accountName}.quadfloor.com.br",
+            "description": "Quadfloor server url"
+        }
+    ],
+    "paths": {
+        "/api/engineering/locals/GetProductionOrder": {
+            "get": {
+                "tags": ["ProductionOrder"],
+                "summary": "Get ProductionOrders",
+                "description": "Retrieves one locals defined in the system.",
+                "operationId": "GetProductionOrder",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Fill this variable with the ID that you need retrieve.",
+                        "required": true,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {},
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "object",
+                                            "description": "Object compose by production order.",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "description": "Object Id.",
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/engineering/locals/GetProductionOrders": {
+            "get": {
+                "tags": ["ProductionOrder"],
+                "summary": "Get ProductionOrders",
+                "description": "Retrieves all the locals defined in the system.",
+                "operationId": "GetProductionOrders",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "Fill this variable with the ID that you need retrieve.",
+                        "required": true,
+                        "style": "form",
+                        "explode": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {},
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "object",
+                                            "description": "Object compose by production order.",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "string",
+                                                    "description": "Object Id.",
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
