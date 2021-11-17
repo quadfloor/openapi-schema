@@ -1,8 +1,8 @@
 # openapi-schemas
 Quadfloor OpenAPI 3.0 JSON schemas. 
 
-<h2><strong>This is a work in progress project</strong></h2>
-<h2>Please contact Quadfloor dev team</h2>
+<h2>*** This is a work in progress project***</h2>
+<h2>***Please contact Quadfloor dev team before usage***</h2>
 
 ## Quadfloor APIs:
 - Engineering API
